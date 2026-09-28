@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[margin=2cm, top=2cm]{geometry}
+\usepackage{tikz}
+  \usetikzlibrary{angles, quotes}
+  \usetikzlibrary{arrows.meta}
+  \usetikzlibrary{positioning}
+\usepackage{pgfplots}
+  \pgfplotsset{compat=1.18}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{tocloft}
+  \renewcommand{\cftsecdotsep}{\cftdotsep}
+  \cftpagenumbersoff{subsection}
+\usepackage[normalem]{ulem}
+\usepackage{dashundergaps}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{chemfig}
+\usepackage{mhchem}
+\usepackage{siunitx}
+
+\definecolor{defmain}{HTML}{1d1280}
+\definecolor{defbg}{HTML}{F4F8F7}
+\definecolor{rpmain}{HTML}{790a73}
+\definecolor{rpbg}{HTML}{F5F5F8}
+\definecolor{zgmain}{HTML}{146609}
+\definecolor{zgbg}{HTML}{F4F6F8}
+
+\newtcolorbox{defbox}[2][]{
+    enhanced,
+    colback=defbg,
+    colframe=defmain,
+    arc=3mm,
+    boxrule=0.6pt,
+    leftrule=1mm,
+    before upper={\textbf{\sffamily\color{defmain}#2}\par\vspace{8pt}},
+    #1
+}
+
+\newtcolorbox{rpbox}[2][]{
+    enhanced,
+    colback=rpbg,
+    colframe=rpmain,
+    arc=3mm,
+    boxrule=0.6pt,
+    leftrule=1mm,
+    before upper={\textbf{\sffamily\color{rpmain}#2}\par\vspace{8pt}},
+    #1
+}
+
+\newtcolorbox{zgledbox}[2][]{
+    enhanced,
+    colback=zgbg,
+    colframe=zgmain,
+    arc=3mm,
+    boxrule=0.6pt,
+    leftrule=1mm,
+    before upper={\textbf{\sffamily\color{zgmain}#2}\par\vspace{8pt}},
+    #1
+}
+
+\title{Zapiski za kemijo v 3. letniku srednje šole}
+\date{}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\end{document}
