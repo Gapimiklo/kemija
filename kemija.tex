@@ -3,16 +3,16 @@
 \usepackage{amsmath}
 \usepackage[margin=2cm, top=2cm]{geometry}
 \usepackage{tikz}
-  \usetikzlibrary{angles, quotes}
-  \usetikzlibrary{arrows.meta}
-  \usetikzlibrary{positioning}
+\usetikzlibrary{angles, quotes}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{positioning}
 \usepackage{pgfplots}
-  \pgfplotsset{compat=1.18}
+\pgfplotsset{compat=1.18}
 \usepackage{amssymb}
 \usepackage{enumitem}
 \usepackage{tocloft}
-  \renewcommand{\cftsecdotsep}{\cftdotsep}
-  \cftpagenumbersoff{subsection}
+\renewcommand{\cftsecdotsep}{\cftdotsep}
+\cftpagenumbersoff{subsection}
 \usepackage[normalem]{ulem}
 \usepackage{dashundergaps}
 \usepackage{xcolor}
@@ -69,6 +69,7 @@
 
 \maketitle
 
+% =====================================================================
 \section{Ogljikovodiki}
 
 \begin{defbox}{Tipi formul}
@@ -77,6 +78,313 @@
 \ce{CH3-CH2-CH3} \hspace{1cm} \textbf{Racionalna formula} \\ \\
 \chemfig{H-C(-[2]H)(-[6]H)-C(-[2]H)(-[6]H)-C(-[2]H)(-[6]H)-H} \hspace{2cm} \textbf{Strukturna formula} \\ \\ \\
 \chemfig{-[:30]-[:-30]} \hspace{2cm} \textbf{Skeletna formula}
-\end{defbox}    
+\end{defbox}
+
+% TODO: stereo formula (klinasta vezava) -- v chemfig z < in <:
+% \chemfig{C(-[:210]H)(<[:150]H)(<:[:330]H)(-[:30]H)}  % preveri
+
+\begin{defbox}{Organske spojine}
+Organske spojine vsebujejo predvsem elemente
+\ce{C}, \ce{H}, \ce{O}, \ce{N}, \ce{P}, \ce{S} in halogene (npr.\ \ce{I}).
+Najdemo jih v maščobah, mišicah \dots % TODO: dopolni
+\end{defbox}
+
+\subsection{Hibridizacija}
+
+\begin{defbox}{Hibridizacija}
+Hibridizacija je mešanje orbital ogljikovega atoma. % TODO: preveri besedilo v zvezku
+\begin{center}
+\begin{tabular}{lll}
+\textbf{Hibridizacija} & \textbf{Vezi med atomi C} & \textbf{Skupina} \\ \hline
+$sp^3$ & samo $\sigma$ vezi (enojna vez) & alkani \\
+$sp^2$ & ena $\sigma$ in ena $\pi$ vez (dvojna vez) & alkeni \\
+$sp$   & ena $\sigma$ in dve $\pi$ vezi (trojna vez) & alkini \\
+\end{tabular}
+\end{center}
+\end{defbox}
+
+% TODO: TikZ skica orbital (sp, sp2, sp3) in primer z oznakami hibridizacije
+% nad vsakim C atomom (primer iz zvezka z dvojno in trojno vezjo)
+
+\subsection{Razdelitev ogljikovodikov}
+
+\begin{defbox}{Alifatski ogljikovodiki}
+\begin{itemize}[noitemsep]
+    \item \textbf{ciklični}
+    \item \textbf{aciklični}
+    \begin{itemize}[noitemsep]
+        \item \textbf{nasičeni} -- alkani
+        \item \textbf{nenasičeni} -- alkeni, alkini
+    \end{itemize}
+\end{itemize}
+% TODO: aromatski ogljikovodiki (benzen, metilbenzen)
+\end{defbox}
+
+\begin{rpbox}{Splošne formule}
+\begin{center}
+\begin{tabular}{ll}
+aciklični alkani: & $\mathrm{C}_n\mathrm{H}_{2n+2}$ \\
+cikloalkani:      & $\mathrm{C}_n\mathrm{H}_{2n}$ \\
+alkeni:           & $\mathrm{C}_n\mathrm{H}_{2n}$ \\
+alkini:           & $\mathrm{C}_n\mathrm{H}_{2n-2}$ \\
+\end{tabular}
+\end{center}
+\end{rpbox}
+
+\begin{zgledbox}{Določitev formule iz molske mase}
+Alkan ima $M_r = 72$. Koliko atomov C ima?
+\begin{align*}
+12n + 1\cdot(2n+2) &= 72 \\
+14n + 2 &= 72 \\
+n &= 5
+\end{align*}
+Formula: \ce{C5H12}.
+\end{zgledbox}
+
+\subsection{Alkani}
+
+\begin{defbox}{Vrste ogljikovih atomov}
+Glede na število vezanih ogljikovih atomov ločimo primarne ($1^\circ$),
+sekundarne ($2^\circ$), terciarne ($3^\circ$) in kvarterne ($4^\circ$) atome C.
+% TODO: primer s štetjem (npr. 6 x 1°, 2 x 2°, 2 x 3°, 1 x 4° pri 3-etil-2,2-dimetilpentanu)
+\end{defbox}
+
+\begin{rpbox}{Lastnosti alkanov}
+\begin{itemize}[noitemsep]
+    \item $\mathrm{C}_1$--$\mathrm{C}_4$: plin (metan, etan, propan, butan)
+    \item $\mathrm{C}_5$--$\mathrm{C}_{16}$: tekočina
+    \item $\mathrm{C}_{17}$ in več: trdna snov
+    \item \textbf{nerazvejane} molekule $\Rightarrow$ višja vrelišča
+    \item \textbf{razvejane} molekule $\Rightarrow$ nižja vrelišča
+\end{itemize}
+Sobni pogoji: $T = 20\,^\circ\mathrm{C}$, $p = 101{,}2\,\mathrm{kPa}$. % preveri vrednost tlaka
+\end{rpbox}
+
+\begin{defbox}{Nafta}
+\begin{itemize}[noitemsep]
+    \item rafiniranje nafte (daljše verige $\to$ krajše verige)
+    \item frakcionirana destilacija nafte -- glej učbenik % TODO: skica destilacijskega stolpa
+\end{itemize}
+\end{defbox}
+
+\begin{zgledbox}{Poskus: oktan in jod}
+Oktan (bencin) in voda tvorita dve fazi (\emph{fazna meja}). Dodamo jod.
+Ker so halogeni nepolarni, se v oktanu raztopi in oktanska faza se obarva vijolično.
+% TODO: skica epruvete
+\end{zgledbox}
+
+% =====================================================================
+\section{Izomerija}
+
+\begin{defbox}{Izomerija}
+\textbf{Izomerija} je pojav, ko imajo spojine enako molekulsko formulo, a različno
+razporeditev atomov. Takšne spojine imenujemo \textbf{izomeri}.
+Zaradi različne zgradbe se razlikujejo v fizikalnih in kemijskih lastnostih.
+\end{defbox}
+
+\subsection{Verižna izomerija}
+
+\begin{defbox}{Verižna izomerija}
+Pojavi se, ko je prisotna alkilna skupina (npr.\ \ce{CH3}).
+\begin{center}
+\begin{tabular}{cc}
+\chemfig{-[:30](-[:90])-[:-30]-[:30]-[:-30]-[:30]} &
+\chemfig{-[:30]-[:-30](-[:-90])-[:30]-[:-30]-[:30]} \\
+2-metilheksan & 3-metilheksan \\
+\end{tabular}
+\end{center}
+\end{defbox}
+
+\begin{zgledbox}{Izomeri \ce{C6H14}}
+\begin{center}
+\begin{tabular}{ccc}
+\chemfig{-[:30]-[:-30]-[:30]-[:-30]-[:30]} &
+\chemfig{-[:30](-[:90])-[:-30]-[:30]-[:-30]} &
+\chemfig{-[:30]-[:-30](-[:-90])-[:30]-[:-30]} \\
+heksan & 2-metilpentan & 3-metilpentan \\[1.5em]
+\chemfig{-[:30](-[:90])-[:-30](-[:-90])-[:30]} &
+\chemfig{-[:30](-[:90])(-[:150])-[:-30]-[:30]} & \\
+2,3-dimetilbutan & 2,2-dimetilbutan & \\
+\end{tabular}
+\end{center}
+Vseh pet je \textbf{verižnih izomerov}.
+% TODO: naloga z razvrstitvijo po vrelišču (3-metilheptan, oktan, 2,2,4-trimetilpentan)
+\end{zgledbox}
+
+\subsection{Položajna izomerija}
+
+\begin{defbox}{Položajna izomerija}
+Pojavi se, ko so prisotne druge skupine (npr.\ halogeni), ter ko se premaknejo
+dvojne ali trojne (večkratne) vezi.
+\begin{center}
+\begin{tabular}{cc}
+\chemfig{Cl-[:-30]-[:30]-[:-30]-[:30]} &
+\chemfig{-[:30](-[:90]Cl)-[:-30]-[:30]} \\
+1-klorobutan & 2-klorobutan \\[1.5em]
+\ce{CH2=CH-CH2-CH3} & \ce{CH3-CH=CH-CH3} \\
+but-1-en & but-2-en \\
+\end{tabular}
+\end{center}
+% TODO: 1-, 2-, 3-fluoropentan
+\end{defbox}
+
+\subsection{Funkcionalna izomerija}
+
+\begin{defbox}{Funkcionalna izomerija}
+Pojavi se, ko se skupine zamenjajo. % TODO: dopolni z zgledi, ko jih obravnavate
+\end{defbox}
+
+% =====================================================================
+\section{Gorenje ogljikovodikov}
+
+\begin{defbox}{Vrste gorenja}
+\begin{center}
+\begin{tabular}{lll}
+\textbf{popolno gorenje} & produkta: & \ce{CO2} in \ce{H2O} \\
+\textbf{nepopolno gorenje} & produkta: & \ce{CO} in saje (\ce{C}) \\
+\end{tabular}
+\end{center}
+\end{defbox}
+
+\begin{rpbox}{Urejanje enačb}
+Enačbo urejamo po vrstnem redu: 1) \ce{C}, 2) \ce{Cl} (če obstaja), 3) \ce{H}, 4) \ce{O}.
+\end{rpbox}
+
+\begin{zgledbox}{Popolno gorenje}
+\begin{align*}
+&\ce{2C4H10(g) + 13O2(g) -> 8CO2(g) + 10H2O(g)} \tag{butan} \\
+&\ce{2C8H18(g) + 25O2(g) -> 16CO2(g) + 18H2O(g)} \tag{oktan}
+\end{align*}
+\end{zgledbox}
+
+\begin{zgledbox}{Nepopolno gorenje}
+Primer: toluen (metilbenzen) $+\ \ce{O2} \to \ce{CO}$ + saje. % TODO: uredi enačbo
+\begin{center}
+\chemfig{*6(-(-CH_3)=-=-=)}
+\end{center}
+\ce{CO} je strupen, ker se veže na hemoglobin v krvi in s tem prepreči vezavo kisika.
+Je brez barve in vonja.
+% TODO: razmerje ogljika/vodika proti kisiku -- plamen s sajami (preveri zapis v zvezku)
+\end{zgledbox}
+
+\begin{zgledbox}{Naloga}
+Pri gorenju 1 mol nekega ogljikovodika nastane 5 mol \ce{CO2} in 4 mol \ce{H2O}.
+\begin{align*}
+&\mathrm{C}_x\mathrm{H}_y + \mathrm{O}_2 \to 5\,\mathrm{CO}_2 + 4\,\mathrm{H}_2\mathrm{O} \\
+&\ce{C5H8 + 7O2 -> 5CO2 + 4H2O}
+\end{align*}
+Ogljikovodik je \ce{C5H8} (npr.\ pent-1,2-dien).
+\end{zgledbox}
+
+% =====================================================================
+\section{Radikalska substitucija}
+
+\begin{defbox}{Reakcije ogljikovodikov}
+Alkani reagirajo na dva načina: \textbf{gorenje} in \textbf{radikalska substitucija}.
+Pogoji za radikalsko substitucijo: povišana temperatura ($\Delta$) ali svetloba ($h\nu$).
+\end{defbox}
+
+\subsection{Prekinitev vezi}
+
+\begin{defbox}{Vrste prekinitev vezi}
+\textbf{Homolitska prekinitev}: nastaneta dva radikala.
+\[ \ce{Br-Br} \longrightarrow \ce{Br^.} + \ce{^.Br} \]
+\textbf{Heterolitska prekinitev}: nastaneta kation in anion.
+\[ \ce{Br-Br} \longrightarrow \ce{Br+} + \ce{Br-} \]
+Radikali nastanejo s segrevanjem ali svetlobo.
+Energija svetlobe: $E = h\cdot\nu$, kjer je $h = 6{,}626\cdot 10^{-34}\,\mathrm{J\,s}$
+(Planckova konstanta).
+\end{defbox}
+
+\begin{defbox}{Nukleofil in elektrofil}
+\textbf{Nukleofil} je delec, ki išče pozitivni center (polarne molekule, npr.\ \ce{H2O}). \\
+\textbf{Elektrofil} je delec, ki išče negativni center in sprejema elektrone (nepolarne molekule). \\
+Molekule so lahko tudi brez naboja.
+\end{defbox}
+
+\subsection{Stopnje reakcije}
+
+\begin{rpbox}{Stopnje radikalske substitucije}
+\begin{enumerate}[noitemsep]
+    \item \textbf{iniciacija} -- začetek
+    \item \textbf{propagacija} -- potek (traja)
+    \item \textbf{terminacija} -- konec
+\end{enumerate}
+\end{rpbox}
+
+\begin{defbox}{Substrat in reagent}
+\textbf{Substrat} je organska spojina, na katero delujemo z reagentom. \\
+\textbf{Reagent} zamenja del substrata; je lahko element ali spojina. \\
+\textbf{Reakcijski pogoji} so okoliščine, pri katerih poteka kemijska reakcija.
+\end{defbox}
+
+\subsection{Primeri}
+
+\begin{zgledbox}{Kloriranje metana}
+Kloriramo lahko enkrat ali večkrat.
+\begin{align*}
+\ce{CH4 + Cl2} &\xrightarrow{\ \Delta\ \text{ali}\ h\nu\ } \ce{CH3Cl + HCl} \quad \text{(klorometan)} \\
+\ce{CH3Cl + Cl2} &\xrightarrow{\ \Delta\ \text{ali}\ h\nu\ } \ce{CH2Cl2 + HCl} \quad \text{(diklorometan)}
+\end{align*}
+\end{zgledbox}
+
+\begin{zgledbox}{Kloriranje kloroetana}
+\[ \ce{CH3-CH2Cl + Cl2} \xrightarrow{\ \Delta\ } \ce{CH3-CHCl2} + \ce{CH2Cl-CH2Cl} + \ce{HCl} \]
+Nastaneta 1,1-dikloroetan in 1,2-dikloroetan.
+\end{zgledbox}
+
+\begin{zgledbox}{Kloriranje cikloheksana}
+\begin{center}
+\schemestart
+\chemfig{*6(------)}
+\arrow{->[\ce{Cl2}, $\Delta$][\ce{-HCl}]}
+\chemfig{*6(--(-Cl)----)}
+\schemestop
+\end{center}
+cikloheksan $\to$ klorocikloheksan
+\end{zgledbox}
+
+\begin{zgledbox}{Bromiranje metilbenzena}
+\begin{center}
+\schemestart
+\chemfig{*6(-(-CH_3)=-=-=)}
+\arrow{->[\ce{Br2}, $h\nu$][\ce{-HBr}]}
+\chemfig{*6(-(-CH_2Br)=-=-=)}
+\schemestop
+\end{center}
+Metilna skupina je alkan, benzenski obroč je aromatska spojina (ostane nespremenjen).
+Produkt: (bromometil)benzen.
+\end{zgledbox}
+
+% =====================================================================
+\section{Alkeni in alkini}
+
+\begin{rpbox}{Splošne formule}
+\begin{center}
+\begin{tabular}{ll}
+alkeni: & $\mathrm{C}_n\mathrm{H}_{2n}$ \\
+alkini: & $\mathrm{C}_n\mathrm{H}_{2n-2}$ \\
+\end{tabular}
+\end{center}
+\end{rpbox}
+
+\begin{rpbox}{Poimenovanje}
+% TODO: dopolni po učiteljevih pravilih
+Končnica \textbf{-en} (dvojna vez), \textbf{-in} (trojna vez), \textbf{-dien}, \textbf{-trien} \dots \\
+Verigo oštevilčimo tako, da ima prva večkratna vez čim manjšo številko.
+\end{rpbox}
+
+\begin{zgledbox}{Primeri}
+\begin{center}
+\begin{tabular}{cc}
+\chemfig{CH_3-CH(-[2]CH_3)-CH_2-C~CH} &
+\chemfig{CH_3-C(-[2]CH_3)=CH-CH=CH_2} \\
+4-metilpent-1-in & 4-metilpenta-1,3-dien \\
+\end{tabular}
+\end{center}
+% TODO: ostale naloge iz zvezka (2,4,6-trimetilhepta-1,3,5-trien,
+% 3-metilciklobut-1-en, 1,4-dimetilciklobut-1-en, 2,5-dimetilcikloheksa-1,3-dien,
+% 2,6,6-trimetilhept-3-in, 7-metilnona-3,5-dien)
+\end{zgledbox}
 
 \end{document}
